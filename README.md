@@ -8,7 +8,6 @@
         - 본 대회에서는 사고의 위험도를 인명피해 심각도로 측정
 2. 평가 방법
 : RMSLE(Root Mean Squared Logarithmic Error) of ECLO
-<br>
 
 
 ### 참여자
@@ -19,7 +18,6 @@
 - RMSLE : 0.42706
 - 리더보드 상위 5%
 
-<br>
 
 ### 프로젝트 구조
 ```bash
@@ -43,19 +41,15 @@
 \---Model Engineering
         AUTOML_baseline.ipynb
 ```  
-<br>
 
 ### Modeling 기법
 - AutoML : https://github.com/mljar/mljar-supervised/
   - CatBoost, XGB regressor, Light GBM regressor 앙상블
-<br>
 - MIT license
-<br>
-<br>
 
 ### 선택한 Feature Engineering 방법
-- 시간정보 : 요일, 연, 월, 일, cos_hour, season
-- 공간정보 : 구, 동, 사고발생횟수(동별)
-- 기타 
-  - 외부 데이터 : 어린어보호구역개수, 급지구분(주차장), 제한속도(cctv), 횡단보도개수, 보안등개수
-  - 파생변수 : 기상상태, 도로형태, 노면상태, 사고유형
+1. 시간정보 : 요일, 연, 월, 일, cos_hour, season
+2. 공간정보 : 구, 동, 사고발생횟수(동별)
+3. 기타 
+   - 외부 데이터 : 어린어보호구역개수, 급지구분(주차장), 제한속도(cctv), 횡단보도개수, 보안등개수
+   - 파생변수 : 기상상태, 도로형태, 노면상태, 사고유형
